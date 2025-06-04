@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/contactsFragment"
-        android:name="com.picpay.desafio.android.ContactsFragment"
+        android:name="com.picpay.desafio.android.view.fragments.ContactsFragment"
         android:label="Contacts Fragment">
     </fragment>
 </navigation>
