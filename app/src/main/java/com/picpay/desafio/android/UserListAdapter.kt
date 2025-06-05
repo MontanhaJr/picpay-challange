@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.picpay.desafio.android.databinding.ListItemUserBinding
 import com.picpay.desafio.android.domain.model.User
+import com.squareup.picasso.Picasso
 
 class UserListAdapter : RecyclerView.Adapter<UserListItemViewHolder>() {
 
@@ -31,4 +32,9 @@ class UserListAdapter : RecyclerView.Adapter<UserListItemViewHolder>() {
     }
 
     override fun getItemCount(): Int = users.size
+
+    override fun onViewRecycled(holder: UserListItemViewHolder) {
+        Picasso.get().cancelRequest(holder.binding.picture)
+        super.onViewRecycled(holder)
+    }
 }

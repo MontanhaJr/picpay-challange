@@ -7,7 +7,7 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 
 class UserListItemViewHolder(
-    private val binding: ListItemUserBinding
+    val binding: ListItemUserBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(user: User) {
