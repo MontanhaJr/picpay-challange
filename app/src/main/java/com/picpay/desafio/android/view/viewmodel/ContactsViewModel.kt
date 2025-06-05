@@ -1,9 +1,9 @@
-package com.picpay.desafio.android.view.viewmodels
+package com.picpay.desafio.android.view.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.picpay.desafio.android.domain.usecase.GetUsersUseCase
-import com.picpay.desafio.android.view.ContactsUiState
+import com.picpay.desafio.android.view.state.ContactsUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

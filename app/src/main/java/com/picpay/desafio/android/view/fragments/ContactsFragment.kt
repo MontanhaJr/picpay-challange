@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.picpay.desafio.android.view.viewmodels.ContactsViewModel
-import com.picpay.desafio.android.UserListAdapter
+import com.picpay.desafio.android.view.viewmodel.ContactsViewModel
+import com.picpay.desafio.android.view.adapter.UserListAdapter
 import com.picpay.desafio.android.databinding.FragmentContactsBinding
-import com.picpay.desafio.android.view.ContactsUiState
+import com.picpay.desafio.android.view.state.ContactsUiState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ContactsFragment : Fragment() {

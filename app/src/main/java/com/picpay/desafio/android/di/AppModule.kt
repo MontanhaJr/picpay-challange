@@ -1,10 +1,10 @@
 package com.picpay.desafio.android.di
 
-import com.picpay.desafio.android.PicPayService
+import com.picpay.desafio.android.data.network.PicPayService
 import com.picpay.desafio.android.data.repository.UserRepository
 import com.picpay.desafio.android.data.repository.UserRepositoryImpl
 import com.picpay.desafio.android.domain.usecase.GetUsersUseCase
-import com.picpay.desafio.android.view.viewmodels.ContactsViewModel
+import com.picpay.desafio.android.view.viewmodel.ContactsViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
