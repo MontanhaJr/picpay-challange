@@ -16,3 +16,11 @@ fun UserDto.toDomain(): User? {
     }
     return User(img, name, id, username)
 }
+
+fun UserDto.toEntity(): UserEntity? {
+    if (img.isNullOrBlank() || name.isNullOrBlank() || username.isNullOrBlank() || id == null) {
+        return null
+    }
+    return UserEntity(id, name, username, img)
+}
+

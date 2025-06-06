@@ -1,5 +1,7 @@
 package com.picpay.desafio.android.di
 
+import androidx.room.Room
+import com.picpay.desafio.android.data.AppDatabase
 import com.picpay.desafio.android.data.network.PicPayService
 import com.picpay.desafio.android.data.repository.UserRepository
 import com.picpay.desafio.android.data.repository.UserRepositoryImpl
@@ -20,7 +22,17 @@ val appModule = module {
             .create(PicPayService::class.java)
     }
 
-    single<UserRepository> { UserRepositoryImpl(get()) }
+    single {
+        Room.databaseBuilder(
+            get(),
+            AppDatabase::class.java,
+            "app-database"
+        ).build()
+    }
+
+    single { get<AppDatabase>().userDao() }
+
+    single<UserRepository> { UserRepositoryImpl(get(), get()) }
     single { GetUsersUseCase(get()) }
     viewModel { ContactsViewModel(get()) }
 }
