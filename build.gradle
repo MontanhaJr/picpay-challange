@@ -29,7 +29,7 @@ buildscript {
         coroutines_version = "1.7.3"
         rxjava_version = "2.2.21"
         rxandroid_version = "2.1.1"
-        core_ktx_test_version = "1.12.0"
+        core_ktx_test_version = "1.6.1"
 
         nav_version = "2.9.0"
     }
@@ -40,7 +40,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.2'
+        classpath 'com.android.tools.build:gradle:8.4.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
